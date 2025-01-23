@@ -20,7 +20,7 @@ var storage=multer.diskStorage({
 
 var upload=multer({storage:storage})
 
-app.post('/reg',upload.array("file"),(req,res)=>{
+app.post('/reg',upload.array("files"),(req,res)=>{
     console.log(req.body)
     res.send({
         file:req.files,
